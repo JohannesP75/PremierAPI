@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Front du framework</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    </head>
+    <body>
+        <form id="import-list" onsubmit="remplirListe(event)">
+            <button>Importer liste</button>
+        </form>
+        <table class="table table-info table-striped table-hover" id="list-clients">
+            <thead>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>Téléphone</th>
+                <th>Statut</th>
+                <th>Actions</th>
+            </thead>
+            <tfoot>
+                <th></th>
+                <th><input id="new-cust-nom"/></th>
+                <th><input id="new-cust-tel" type="tel"/></th>
+                <th><select id="new-cust-sta" name="select-new-cust-status" required>
+                    <option value="">-- Statut du client --</option>
+                    <option value="0">Ancien</option>
+                    <option value="1">Nouveau</option>
+                    <option value="2">Rare</option>
+                    <option value="3">Fréquent</option>
+                </select></th>
+                <th>
+                    <button onclick="createClient()">Créer</button>
+                </th>
+            </tfoot>
+        </table>
+
+        <script src="main.js"></script>
+    </body>
+</html>
